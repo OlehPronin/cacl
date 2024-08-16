@@ -1,0 +1,71 @@
+/* styles.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #b9fbc0, #a0c4ff); /* Градиентный фон */
+    background-size: 400% 400%; /* Плавный переход фона */
+    animation: gradient 15s ease infinite; /* Анимация фона */
+    margin: 0;
+}
+
+.calculator {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    width: 250px; /* Увеличим ширину для лучшего размещения кнопок */
+    position: relative;
+}
+
+.display {
+    background-color: #444;
+    color: #fff;
+    font-size: 32px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+    margin-bottom: 10px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3); /* Внутреннее свечение дисплея */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Плавные переходы */
+}
+
+.btn:hover {
+    background-color: #777;
+    transform: scale(1.1); /* Увеличение кнопки при наведении */
+}
+
+.btn:active {
+    background-color: #444;
+    transform: scale(1.05); /* Немного уменьшенная кнопка при нажатии */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
